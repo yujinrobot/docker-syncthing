@@ -4,7 +4,7 @@ docker rm -f syncthing
 docker run -d --restart=always \
   -v /srv/sync:/srv/data \
   -v /srv/syncthing:/srv/config \
-  -p 22000:22000  -p 21027:21027/udp \
+  -p 22000:22000  -p 21027:21027/udp -p 8384:8384 \
   --name syncthing \
   yujin/syncthing
 
